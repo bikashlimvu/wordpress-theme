@@ -1,2 +1,2 @@
 # wordpress-theme
-Wordpress Theme
+A custom Wordpress theme development
