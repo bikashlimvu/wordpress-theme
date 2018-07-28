@@ -1,0 +1,13 @@
+@import
+	'config/mixins',
+	'config/variables';
+
+@import
+	'base/normalize',
+	'base/typography';
+
+.centering {
+	padding-left: 20px;
+	padding-right: 20px;
+	max-width: $medium-desktop;
+}
