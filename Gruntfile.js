@@ -3,16 +3,19 @@ module.exports = function(grunt) {
     grunt.initConfig({
         watch: {
             js: {
-                files: ['**/*.js'],
+                files: 'js/**/*.js',
                 tasks: ['uglify:js'],
             },
             css: {
-                files: ['**/*.sass'],
+                files: 'sass/**/*.scss',
                 tasks: ['sass:css'],
             }
         },
         sass: {
             css: {
+                options: {
+                    style: 'expanded'
+                  },
                 files: {
                     'css/site.css': ['sass/site.scss']
                 }
@@ -20,10 +23,9 @@ module.exports = function(grunt) {
         },
         uglify: {
             js: {
-                options: {
-                    sourceMap: true,
-                    sourceMapName: 'path/to/sourcemap.map'
-                },
+                // options: {
+                //     sourceMap: true,
+                // },
                 // files: [{
                 //     cwd: 'js/',
                 //     src: '**/*.js',
@@ -41,17 +43,18 @@ module.exports = function(grunt) {
             default_options: {
                 bsFiles: {
                     src: [
-                        "css/*.css",
+                        "css/site.css",
                         "*.html"
                     ]
                 },
                 options: {
                     server: {
                         baseDir: "./"
-                    }
+                    },
+                    watchTask: true
                 }
             }
-        }
+        },
     });
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-uglify');
@@ -59,4 +62,5 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-browser-sync');
     grunt.registerTask('default',['browserSync', 'watch']);
     grunt.registerTask('sync',['browserSync']);
+    grunt.registerTask('html',['watch']);
 }

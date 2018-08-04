@@ -1,0 +1,116 @@
+// Animations
+@-webkit-keyframes scroll-ani {
+  0% {
+    opacity: 1;
+    top: 29%;
+  }
+  15% {
+    opacity: 1;
+    top: 50%;
+  }
+  50% {
+    opacity: 0;
+    top: 50%;
+  }
+  100% {
+    opacity: 0;
+    top: 29%;
+  }
+}
+
+@-moz-keyframes scroll-ani {
+  0% {
+    opacity: 1;
+    top: 29%;
+  }
+  15% {
+    opacity: 1;
+    top: 50%;
+  }
+  50% {
+    opacity: 0;
+    top: 50%;
+  }
+  100% {
+    opacity: 0;
+    top: 29%;
+  }
+}
+
+@keyframes scroll-ani {
+  0% {
+    opacity: 1;
+    top: 29%;
+  }
+  15% {
+    opacity: 1;
+    top: 50%;
+  }
+  50% {
+    opacity: 0;
+    top: 50%;
+  }
+  100% {
+    opacity: 0;
+    top: 29%;
+  }
+}
+
+.scroll-anchor {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.mouse-scroll {
+    position: relative;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: normal;
+    color: $text-color;
+
+    .mouse {
+        position: relative;
+        display: block;
+        width: 46px;
+        height: 73px;
+        margin: 0 auto 20px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        border: 3px solid $text-color;
+        border-radius: 23px;
+
+        .mouse-movement {
+            position: absolute;
+            display: block;
+            top: 29%;
+            left: 50%;
+            width: 8px;
+            height: 8px;
+            margin: -4px 0 0 -4px;
+            background: $text-color;
+            border-radius: 50%;
+            -webkit-animation: scroll-ani 4s linear infinite;
+            -moz-animation: scroll-ani 4s linear infinite;
+            animation: scroll-ani 4s linear infinite;
+        }
+
+    }
+
+    .mouse-message {
+        display: none;
+        position: absolute;
+        bottom: -8px;
+        width: 100%;
+        text-align: center;
+    }
+
+    &:hover {
+        .mouse-message {
+          display: block;
+        }
+    }
+
+}

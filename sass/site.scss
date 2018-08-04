@@ -6,8 +6,30 @@
 	'base/normalize',
 	'base/typography';
 
+@import
+	'modules/home',
+	'modules/progress-bar',
+	'modules/mouse-scroll';
+
+body {
+	font-family: $body-font;
+	font-size: $body-font-size;
+	font-weight: $body-font-weight;
+	line-height: $body-line-height;
+	color: $text-color;
+	background-color: $background-color;
+
+}
+
 .centering {
 	padding-left: 20px;
 	padding-right: 20px;
-	max-width: $medium-desktop;
+	max-width: $desktop;
+	margin: 0 auto;
+}
+
+.has-bg {
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
 }
