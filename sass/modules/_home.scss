@@ -6,11 +6,15 @@
         background-color: white;
         padding: 60px;
         -webkit-box-shadow: 0 10px 6px -6px #777;
-	   -moz-box-shadow: 0 10px 6px -6px #777;
-	        box-shadow: 0 10px 6px -6px #777;
+	    -moz-box-shadow: 0 10px 6px -6px #777;
+	    box-shadow: 0 10px 6px -6px #777;
 
             @include tablet {
                 padding: 35px;
+            }
+
+            @include mobile {
+                padding: 20px;
             }
     }
 
@@ -24,10 +28,10 @@
 }
 
 .hero {
-    height: 85vh;
+    height: 100vh;
 
     @include mobile {
-        height: 100vh;
+        height: 85vh;
     }
 
     .hero-content {
@@ -41,6 +45,10 @@
         text-transform: uppercase;
         text-align: center;
         color: $brand-color;
+
+        @include mobile {
+            font-size: 18px;
+        }
     }
 
 }
