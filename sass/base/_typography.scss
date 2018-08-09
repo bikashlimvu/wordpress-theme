@@ -28,6 +28,11 @@ h2 {
     @include tablet {
         margin-left: -35px;
     }
+
+    @include mobile {
+        font-size: 28px;
+        margin-left: -20px;
+    }
 }
 
 h3 {
@@ -42,4 +47,9 @@ h4 {
 
 p {
     margin: 0 0 14px 0;
+}
+
+a {
+    color: $title-color;
+    text-decoration: none;
 }
