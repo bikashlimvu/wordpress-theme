@@ -462,6 +462,12 @@ h2 {
     margin-left: -35px;
   }
 }
+@media only screen and (max-width: 480px) {
+  h2 {
+    font-size: 28px;
+    margin-left: -20px;
+  }
+}
 
 h3 {
   font-size: 18px;
@@ -475,6 +481,11 @@ h4 {
 
 p {
   margin: 0 0 14px 0;
+}
+
+a {
+  color: #ff5800;
+  text-decoration: none;
 }
 
 .section {
@@ -493,6 +504,11 @@ p {
     padding: 35px;
   }
 }
+@media only screen and (max-width: 480px) {
+  .section.has-padding {
+    padding: 20px;
+  }
+}
 .section:first-child {
   margin-top: 0;
 }
@@ -501,11 +517,11 @@ p {
 }
 
 .hero {
-  height: 85vh;
+  height: 100vh;
 }
 @media only screen and (max-width: 480px) {
   .hero {
-    height: 100vh;
+    height: 85vh;
   }
 }
 .hero .hero-content {
@@ -519,6 +535,11 @@ p {
   text-transform: uppercase;
   text-align: center;
   color: #3c414a;
+}
+@media only screen and (max-width: 480px) {
+  .hero .hero-content {
+    font-size: 18px;
+  }
 }
 
 .job .job-meta .job-title,
@@ -742,6 +763,11 @@ p {
   width: 100%;
   text-align: center;
 }
+@media only screen and (max-width: 480px) {
+  .scroll-anchor {
+    bottom: 0;
+  }
+}
 
 .mouse-scroll {
   position: relative;
@@ -761,6 +787,12 @@ p {
   box-sizing: border-box;
   border: 3px solid #666;
   border-radius: 23px;
+}
+@media only screen and (max-width: 480px) {
+  .mouse-scroll .mouse {
+    width: 32px;
+    height: 48px;
+  }
 }
 .mouse-scroll .mouse .mouse-movement {
   position: absolute;
@@ -787,9 +819,98 @@ p {
   display: block;
 }
 
+.wpcf7-form .left-column,
+.wpcf7-form .right-column {
+  width: 48%;
+  display: inline-block;
+  vertical-align: top;
+  overflow: hidden;
+}
+@media only screen and (max-width: 768px) {
+  .wpcf7-form .left-column,
+  .wpcf7-form .right-column {
+    width: 100%;
+  }
+}
+.wpcf7-form .right-column {
+  float: right;
+}
+@media only screen and (max-width: 768px) {
+  .wpcf7-form .right-column {
+    float: none;
+  }
+}
+.wpcf7-form input[type="text"],
+.wpcf7-form input[type="email"],
+.wpcf7-form textarea {
+  width: 100%;
+  padding: 5px;
+  background-color: transparent;
+}
+.wpcf7-form textarea {
+  height: 170px;
+  resize: none;
+}
+.wpcf7-form .form-field {
+  position: relative;
+}
+.wpcf7-form .form-field.margin-bottom {
+  margin-bottom: 50px;
+}
+.wpcf7-form .wpcf7-form-control {
+  display: block;
+  width: 100%;
+  height: 36px;
+  border-width: 0 0 2px 0;
+  border-color: #666;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  font-size: 16px;
+}
+.wpcf7-form .wpcf7-form-control:focus {
+  outline: none;
+}
+.wpcf7-form .input-label {
+  position: absolute;
+  left: 10px;
+  bottom: 11px;
+  font-size: 16px;
+  color: #666;
+  cursor: text;
+  transition: transform .2s ease-in-out;
+}
+.wpcf7-form .input-label.not-empty {
+  transform: translateY(-24px);
+}
+.wpcf7-form .recaptcha,
+.wpcf7-form .send-button {
+  display: inline-block;
+  width: auto;
+  vertical-align: top;
+}
+.wpcf7-form .recaptcha .wpcf7-form-control-wrap {
+  display: inline-block;
+}
+.wpcf7-form .wpcf7-submit {
+  display: inline-block;
+  width: 304px;
+  height: 75px;
+  vertical-align: top;
+  background-color: #ff5800;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 1.4;
   color: #666;
