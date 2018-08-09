@@ -26,14 +26,6 @@ module.exports = function(grunt) {
                 // options: {
                 //     sourceMap: true,
                 // },
-                // files: [{
-                //     cwd: 'js/',
-                //     src: '**/*.js',
-                //     dest: 'js/',
-                //     expand: true,
-                //     flatten: false,
-                //     ext: 'min.js'
-                // }]
                 files: {
                     'js/site.min.js': ['js/site.js']
                 }
@@ -61,6 +53,5 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-browser-sync');
     grunt.registerTask('default',['browserSync', 'watch']);
-    grunt.registerTask('sync',['browserSync']);
-    grunt.registerTask('html',['watch']);
+    grunt.registerTask('develop',['watch', 'sass', 'uglify']);
 }
