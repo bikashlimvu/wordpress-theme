@@ -1,0 +1,27 @@
+////
+/// Variables
+////
+
+// Typography
+$font-family-base:      'Roboto', 'Arial', sans-serif;
+$font-size-base:        rem(15);
+$line-height-base:      1.55;
+
+$headings-font-family:  'Playfair Display';
+$headings-font-weight:  400;
+$headings-line-height:  1.3;
+
+$h1-font-size:          rem(40);
+$h2-font-size:          rem(36);
+$h3-font-size:          rem(30);
+$h4-font-size:          rem(21);
+$h5-font-size:          rem(17);
+$h6-font-size:          rem(15);
+
+//$headings-font-weight:  bold;
+
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/type";

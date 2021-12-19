@@ -1,0 +1,19 @@
+/**
+ * ==============
+ * Project config
+ * ==============
+ */
+// Modules
+const path = require("path");
+
+// Wordpress theme name
+// const themeName = "custom-theme";
+
+// Base config
+const config = module.exports = {
+  srcPath: path.resolve(__dirname, "./src/"),
+  distPath: path.resolve(__dirname, "./dist"),
+  distPublicPath: "/dist/", // Public url path
+  useBrowserSync: false,
+  strict: false
+}

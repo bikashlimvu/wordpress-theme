@@ -1,0 +1,46 @@
+.content {
+  position: relative;
+  margin-bottom: 50px;
+
+  &__container {
+    @include make-container-max-widths();
+    @include make-container();
+  }
+
+  &__row {
+    @include make-row();
+  }
+
+  &__text {
+    @include make-col-ready();
+    @include make-col(12);
+
+    &--column {
+      @include media-breakpoint-up(lg) {
+        @include make-col(8.7);
+      }
+    }
+
+    &--center {
+      text-align: center;
+    }
+
+    h2, h3, h4, h5 {
+      color: $c-astral;
+    }
+
+    p {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &__sidebar {}
+}
+

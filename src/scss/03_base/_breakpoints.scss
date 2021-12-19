@@ -1,0 +1,21 @@
+/// Logs the breakpoint :before a target element
+///
+/// Useful for JS app to decipher the current breakpoint
+///
+/// @param $breakpoint - Current breakpoint
+/// @param $target [body] - Target HTML element
+///
+/// @example: @include custom-log-breakpoint('md');
+@mixin custom-declare-breakpoint($breakpoint, $target: 'body') {
+  #{$target}:before {
+    content: "#{$breakpoint}";
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-only($breakpoint) {
+    @include custom-declare-breakpoint($breakpoint);
+  }
+}

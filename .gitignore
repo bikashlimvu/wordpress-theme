@@ -1,0 +1,21 @@
+# IDE
+.idea/
+.vscode
+
+# ignore node dependency directories
+node_modules/
+vendor/
+
+# ignore log files and databases
+*.log
+*.sql
+*.sqlite
+
+# Ignore app config
+config.js
+
+# Ignore .htaccess
+.htaccess
+
+# Dist
+dist/

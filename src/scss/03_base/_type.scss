@@ -1,0 +1,35 @@
+////
+/// Typography
+///
+/// @see 02_vendors/bootstrap.scss
+////
+@include media-breakpoint-up(sm) {
+
+  body {
+    font-size: rem(15);
+  }
+
+  h1 {
+    font-size: rem(40);
+  }
+
+  h2 {
+    font-size: rem(36);
+  }
+
+  h3 {
+    font-size: rem(30);
+  }
+
+  h4 {
+    font-size: rem(21);
+  }
+
+  h5 {
+    font-size: rem(17);
+  }
+
+  h6 {
+    font-size: rem(15);
+  }
+}

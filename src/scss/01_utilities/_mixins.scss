@@ -1,0 +1,33 @@
+@mixin web-font($font-name, $file-path, $file-name, $font-weight: "normal", $font-style: "normal") {
+  $full-path: $file-path + $file-name;
+  @font-face {
+    font-family: '#{$font-name}';
+    font-weight: #{$font-weight};
+    font-style: #{$font-style};
+    src: local('#{$full-path}'),
+         //url('#{$full-path}.woff2') format('woff2'),
+         //url('#{$full-path}.woff') format('woff'),
+         url('#{$full-path}.ttf') format('truetype');
+    font-display: swap;
+  }
+}
+
+@mixin accessible-hidden {
+  // Text replacement / Image replacement technique - A nicer hide text -9999px alternative
+  border: 0;
+  background-color: transparent;
+  text-shadow: none;
+  color: transparent;
+  font: 0/0 a;
+
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
